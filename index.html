@@ -143,11 +143,12 @@
         <img src="./resources/our_method.png" class="center">
         <div class="content has-text-justified">
           <p style="margin-top: 30px"> 
-            In this paper, We design a neural network to learn an implicit function $f$ from a single 3D point cloud by progressively pulling a set of query points $Q_0$ onto the underlying surface
+            In this paper, We design a neural network to learn an implicit function $f$ from a single 3D point cloud by progressively pulling a set of query points $Q_0$ onto the underlying surface.
           </p>
           <p style="margin-top: 30px">
             Here is an overview of our method. 
-            (a) Frequency Feature Transformation (FFT) module and (b) Multi-Step Pulling (MSP) module. In (a), we learn Fourier bases <p>$h_{i}(Q)$</p> from query points $Q$ using the Fourier layer and obtain multi-level frequency features <p>$ {y_{i}}$</p> through Hadamard product. In (b), using multi-level frequency features from (a) and a linear network \textbf{LSNN} with shared parameters, we calculate the distance(D) of $Q_ {i}$ to its corresponding surface target point $Q_{t}$ to predict a more accurate surface. We visualize the predicted SDF distribution map corresponding to the frequency features in (a) and the reconstruction from each step of SDF predictions on the right side of (b).
+            We propse (a) Frequency Feature Transformation (FFT) module and (b) Multi-Step Pulling (MSP) module to learn implicit functions from coarse to fine.
+			In (a), we learn Fourier bases <p>$h_{i}(Q)$</p> from query points $Q$ using the Fourier layer and obtain multi-level frequency features <p>$ {y_{i}}$</p> through Hadamard product. In (b), using multi-level frequency features from (a) and a linear network \textbf{LSNN} with shared parameters, we calculate the distance(D) of $Q_ {i}$ to its corresponding surface target point $Q_{t}$ to predict a more accurate surface. We visualize the predicted SDF distribution map corresponding to the frequency features in (a) and the reconstruction from each step of SDF predictions on the right side of (b).
           </p>
         </div>
 
