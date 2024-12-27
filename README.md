@@ -94,8 +94,6 @@ We provide the input point cloud data and pretrained model in **/data/dfaust**  
 ## Train
 
 You can train our method to reconstruct surfaces from a single point cloud as:
-
-- ShapeNetCars
   
   ```
   python run.py --gpu 0 --conf confs/dfaust.conf --filelist input.txt
