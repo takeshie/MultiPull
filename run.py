@@ -201,7 +201,7 @@ if __name__ == '__main__':
 
     torch.cuda.set_device(args.gpu)
     data_list = []
-    base_dir='/data1/yth/multipull_code/frequency-sdf/'
+    base_dir='./data/dfaust'
     with open(os.path.join(base_dir+args.filelist)) as f:
         lines = f.readlines()
         for line in lines:
@@ -212,4 +212,3 @@ if __name__ == '__main__':
         for dataname in data_list:
             runner = Runner(args, args.conf, dataname, timestamp)
             runner.train()
-
