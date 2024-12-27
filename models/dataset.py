@@ -16,33 +16,9 @@ def search_nearest_point(point_batch, point_gt):
     return dis_idx
 
 def process_data(data_dir, save_dir, dataname):
-    #mesh_dir=os.path.join(data_dir, dataname,'models/') + 'watered.obj'
-    #mesh_dir = '/data1/yth/multipull_code/frequency-sdf/data/srb/gargoyle.ply'
-    # if os.path.exists(mesh_dir):
-    #     mesh = trimesh.load(mesh_dir, force='mesh')
-    #     mesh_vertices = mesh.vertices
-    #     sample_num=len(mesh_vertices)
-    #     pointcloud, _ = trimesh.sample.sample_surface(mesh, 100000)
-    # #print(os.path.join(data_dir,dataname) + '.ply')
-    # #input()
-    # if os.path.exists(os.path.join(data_dir,dataname) + '.ply'):
-    #     mesh = trimesh.load(os.path.join(data_dir,dataname) + '.ply')
-    #     #mesh = trimesh.load('/data1/yth/multipull_code/frequency-sdf/data/srb/gargoyle.ply')
-    #     mesh_vertices = mesh.vertices
-    #     sample_num=len(mesh_vertices)
-    #     pointcloud, _ = trimesh.sample.sample_surface(mesh, 100000)
-    # elif os.path.exists(os.path.join(data_dir, dataname) + '.txt'):
-    #     #print()
-    #pointcloud = np.loadtxt(os.path.join(data_dir, dataname)+ '.txt')
-    #pts_path = os.path.join(data_dir, dataname)
     pointcloud = np.loadtxt(os.path.join(data_dir, dataname)+'.txt')
     indices = np.random.choice(pointcloud.shape[0], 100000, replace=False)
     pointcloud = pointcloud[indices]
-    # np.savetxt('res.txt',pointcloud)
-    # input()
-    # else:
-    #     print('Only support .xyz or .ply data. Please make adjust your data.')
-    #     exit()
     shape_scale = np.max([np.max(pointcloud[:,0])-np.min(pointcloud[:,0]),np.max(pointcloud[:,1])-np.min(pointcloud[:,1]),np.max(pointcloud[:,2])-np.min(pointcloud[:,2])])
     shape_center = [(np.max(pointcloud[:,0])+np.min(pointcloud[:,0]))/2, (np.max(pointcloud[:,1])+np.min(pointcloud[:,1]))/2, (np.max(pointcloud[:,2])+np.min(pointcloud[:,2]))/2]
     pointcloud = pointcloud - shape_center
