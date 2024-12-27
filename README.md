@@ -57,7 +57,6 @@ Please also check out the following works that inspire us a lot:
 
 * [Junsheng Zhou et al. - # CAP-UDF: Learning Unsigned Distance Functions Progressively from Raw Point Clouds with Consistency-Aware Field Optimization (TPAMI 2024)](https://github.com/junshengzhou/CAP-UDF/)
 * [Chao Chen et al. - Gridpull: Towards Scalability in Learning Implicit Representations from 3D Point Clouds (ICCV 2023)](https://github.com/chenchao15/GridPull/)
-* [Baorui Ma et al. - Reconstructing Surfaces for Sparse Point Clouds with On-Surface Priors (CVPR2022)](https://mabaorui.github.io/-OnSurfacePrior_project_page/)
 * [Baorui Ma et al. - Neural-Pull: Learning Signed Distance Functions from Point Clouds by Learning to Pull Space onto Surfaces (ICML2021)](https://github.com/mabaorui/NeuralPull/)
 
 ## Installation
