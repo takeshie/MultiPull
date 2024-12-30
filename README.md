@@ -1,12 +1,11 @@
 <p align="center">
-
 <h1 align="center">MultiPull: Detailing Signed Distance Functions by Pulling Multi-Level Queries at Multi-Step</h1>
   <p align="center">
     <a href="https://github.com/takeshie/"><strong>Takeshi Noda*</strong></a>
     ·
     <a href="https://github.com/chenchao15/"><strong>Chao Chen*</strong></a>
     ·
-    <a href="https://github.com/Wei-Qi/"><strong>Weiqi Zhang</strong></a>
+    <a href="https://weiqi-zhang.github.io/"><strong>Weiqi Zhang</strong></a>
     ·
     <a href="https://github.com/liuxinhai/"><strong>Xinhai Liu</strong></a>
     ·
@@ -15,6 +14,7 @@
     <a href="https://h312h.github.io/"><strong>Zhizhong Han</strong></a>
 
 </p>
+
   <p align="center"><strong>(* Equal Contribution)</strong></p>
   <h2 align="center">NeurIPS 2024</h2>
   <h3 align="center"><a href="https://arxiv.org/pdf/2411.01208">Paper</a> | <a href="https://github.com/takeshie/MultiPull">Project Page</a></h3>
@@ -29,7 +29,7 @@
   <img src="figs/overview.jpg" width="780" />
 </p>
 
-Overview of our method: (a) Frequency Feature Transformation (FFT) module and (b) Multi-Step Pulling (MSP) module. In (a), we learn Fourier bases $h_{i}(Q)$ from query points $Q$ using the Fourier layer and obtain multi-level frequency features $ {y_{i}}$ through Hadamard product. In (b), using multi-level frequency features from (a) and a linear network \textbf{LSNN} with shared parameters, we calculate the distance(D) of $Q_ {i}$ to its corresponding surface target point $Q_{t}$ to predict a more accurate surface. We visualize the predicted SDF distribution map corresponding to the frequency features in (a) and the reconstruction from each step of SDF predictions on the right side of (b).
+Overview of our method: (a) Frequency Feature Transformation (FFT) module and (b) Multi-Step Pulling (MSP) module. In (a), we learn Fourier bases $h_{i}(Q)$ from query points $Q$ using the Fourier layer and obtain multi-level frequency features $y_{i}$ through Hadamard product. In (b), using multi-level frequency features from (a) and a linear network **LSNN** with shared parameters, we calculate the distance(D) of $Q_ {i}$ to its corresponding surface target point $Q_{t}$ to predict a more accurate surface. We visualize the predicted SDF distribution map corresponding to the frequency features in (a) and the reconstruction from each step of SDF predictions on the right side of (b).
 
 ## Demo Results
 
@@ -94,7 +94,7 @@ We provide the input point cloud data and pretrained model in **/data/dfaust**  
 ## Train
 
 You can train our method to reconstruct surfaces from a single point cloud as:
-  
+
   ```
   python run.py --gpu 0 --conf confs/dfaust.conf --filelist input.txt
   ```
